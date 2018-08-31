@@ -1,7 +1,4 @@
-﻿using System;
-using CitizenFX.Core;
-using CitizenFX.Core.Native;
-using JetBrains.Annotations;
+﻿using JetBrains.Annotations;
 using NFive.SDK.Core.Diagnostics;
 using NFive.SDK.Server.Controllers;
 using NFive.SDK.Server.Events;
