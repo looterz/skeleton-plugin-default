@@ -5,7 +5,7 @@ using NFive.SDK.Server;
 [assembly: ServerPlugin]
 
 [assembly: AssemblyTitle("{{org}} {{project}}")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("{{desc}}")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("{{org}}")]
 [assembly: AssemblyProduct("{{org}} {{project}}")]
