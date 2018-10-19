@@ -1,6 +1,6 @@
 ﻿namespace {{org}}.{{project}}.Shared
 {
-	public class Foo
+	public class {{project}}
 	{
 
 	}
