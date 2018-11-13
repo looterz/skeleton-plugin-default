@@ -11,7 +11,7 @@ namespace {{org}}.{{project}}.Client
 	[PublicAPI]
 	public class {{project}}Service : Service
 	{
-		public {{project}}Service(ILogger logger, ITickManager ticks, IEventManager events, IRpcHandler rpc, INuiManager nui, User user) : base(logger, ticks, events, rpc, nui, user)
+		public {{project}}Service(ILogger logger, ITickManager ticks, IEventManager events, IRpcHandler rpc, OverlayManager overlay, User user) : base(logger, ticks, events, rpc, overlay, user)
 		{
 			this.Logger.Debug("Hello World!");
 		}
