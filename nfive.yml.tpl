@@ -1,7 +1,7 @@
-name: {{org}}/{{project}}
+name: {{orgorig}}/{{projectorig}}
 version: 1.0.0
 description: {{desc}}
-author: {{org}}
+author: {{orgorig}}
 license: LGPL{{ if server }}
 server:
   main:

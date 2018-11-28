@@ -4,12 +4,12 @@ using NFive.SDK.Server;
 
 [assembly: ServerPlugin]
 
-[assembly: AssemblyTitle("{{org}} {{project}}")]
+[assembly: AssemblyTitle("{{orgorig}} {{projectorig}}")]
 [assembly: AssemblyDescription("{{desc}}")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("{{org}}")]
-[assembly: AssemblyProduct("{{org}} {{project}} Server Plugin")]
-[assembly: AssemblyCopyright("Copyright © {{org}} {{date.now.year}}")]
+[assembly: AssemblyCompany("{{orgorig}}")]
+[assembly: AssemblyProduct("{{orgorig}} {{projectorig}} Server Plugin")]
+[assembly: AssemblyCopyright("Copyright © {{orgorig}} {{date.now.year}}")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 [assembly: ComVisible(false)]

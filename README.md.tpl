@@ -1,2 +1,2 @@
-# {{org}} {{project}}
+# {{orgorig}} {{projectorig}}
 {{desc}}

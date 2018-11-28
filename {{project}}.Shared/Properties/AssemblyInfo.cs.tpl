@@ -1,12 +1,12 @@
 using System.Reflection;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyTitle("{{org}} {{project}}")]
+[assembly: AssemblyTitle("{{orgorig}} {{projectorig}}")]
 [assembly: AssemblyDescription("{{desc}}")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("{{org}}")]
-[assembly: AssemblyProduct("{{org}} {{project}} Shared Library")]
-[assembly: AssemblyCopyright("Copyright © {{org}} {{date.now.year}}")]
+[assembly: AssemblyCompany("{{orgorig}}")]
+[assembly: AssemblyProduct("{{orgorig}} {{projectorig}} Shared Library")]
+[assembly: AssemblyCopyright("Copyright © {{orgorig}} {{date.now.year}}")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 [assembly: ComVisible(false)]
