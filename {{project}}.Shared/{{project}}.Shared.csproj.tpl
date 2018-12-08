@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>{{org}}.{{project}}.Shared</RootNamespace>
-    <AssemblyName>{{org}}.{{project}}.Shared</AssemblyName>
+    <AssemblyName>{{org}}.{{project}}.Shared.net</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
