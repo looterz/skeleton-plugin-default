@@ -1,4 +1,5 @@
 using JetBrains.Annotations;
+using NFive.SDK.Client.Commands;
 using NFive.SDK.Client.Events;
 using NFive.SDK.Client.Interface;
 using NFive.SDK.Client.Rpc;
@@ -11,7 +12,7 @@ namespace {{org}}.{{project}}.Client
 	[PublicAPI]
 	public class {{project}}Service : Service
 	{
-		public {{project}}Service(ILogger logger, ITickManager ticks, IEventManager events, IRpcHandler rpc, OverlayManager overlay, User user) : base(logger, ticks, events, rpc, overlay, user)
+		public {{project}}Service(ILogger logger, ITickManager ticks, IEventManager events, IRpcHandler rpc, ICommandManager commands, OverlayManager overlay, User user) : base(logger, ticks, events, rpc, commands, overlay, user)
 		{
 			this.Logger.Debug("Hello World!");
 		}
