@@ -6,15 +6,44 @@ using NFive.SDK.Client.Rpc;
 using NFive.SDK.Client.Services;
 using NFive.SDK.Core.Diagnostics;
 using NFive.SDK.Core.Models.Player;
+using System;
+using System.Threading.Tasks;
+using {{org}}.{{project}}.Client.Overlays;
+using {{org}}.{{project}}.Shared;
 
 namespace {{org}}.{{project}}.Client
 {
 	[PublicAPI]
 	public class {{project}}Service : Service
 	{
-		public {{project}}Service(ILogger logger, ITickManager ticks, IEventManager events, IRpcHandler rpc, ICommandManager commands, OverlayManager overlay, User user) : base(logger, ticks, events, rpc, commands, overlay, user)
+		private Configuration config;
+		private {{project}}Overlay overlay;
+
+		public {{project}}Service(ILogger logger, ITickManager ticks, IEventManager events, IRpcHandler rpc, ICommandManager commands, OverlayManager overlay, User user) : base(logger, ticks, events, rpc, commands, overlay, user) { }
+
+		public override async Task Started()
+		{
+			// Request server configuration
+			this.config = await this.Rpc.Event({{project}}Events.Configuration).Request<Configuration>();
+
+			this.Logger.Debug($"From server config: {this.config.Example}");
+
+			// Update local configuration on server configuration change
+			this.Rpc.Event({{project}}Events.Configuration).On<Configuration>((e, c) => this.config = c);
+
+			// Create overlay
+			this.overlay = new {{project}}Overlay(this.OverlayManager);
+
+			// Attach a tick handler
+			this.Ticks.Attach(OnTick);
+		}
+
+		private async Task OnTick()
 		{
 			this.Logger.Debug("Hello World!");
+			// Do something every frame
+
+			await Delay(TimeSpan.FromSeconds(1));
 		}
 	}
 }

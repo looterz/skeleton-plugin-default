@@ -13,3 +13,5 @@ client:
     - {{org}}.{{project}}.Client{{ if shared }}
   include:
     - {{org}}.{{project}}.Shared{{ end }}{{ end }}
+  files:
+    - Overlays/{{project}}Overlay.html

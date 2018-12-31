@@ -45,6 +45,7 @@
       <HintPath>..\packages\JetBrains.Annotations.2018.2.1\lib\net20\JetBrains.Annotations.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>False</Private>
@@ -60,6 +61,7 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Overlays\{{project}}Overlay.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="{{project}}Service.cs" />
   </ItemGroup>
@@ -73,5 +75,10 @@
       <Private>False</Private>
     </ProjectReference>
   </ItemGroup>{{ end }}
+  <ItemGroup>
+    <Content Include="Overlays\{{project}}Overlay.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
