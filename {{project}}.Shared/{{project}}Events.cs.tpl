@@ -1,4 +1,4 @@
-﻿namespace {{org}}.{{project}}.Shared
+namespace {{org}}.{{project}}.Shared
 {
 	public class {{project}}Events
 	{
